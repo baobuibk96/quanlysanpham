@@ -15,7 +15,7 @@
 			
 			include("clspage.php");
 			$paging = new Paging; 
-			$limit =30;
+			$limit =9;
 			// Tổng số mẫu tin 
 			$paging->findTotal($link,'sanpham'); 
 			// Tổng số trang 
@@ -46,20 +46,19 @@
 		$link="san-pham-".$rows['mahang'].".html";
    ?>
 		<li class="box-1 span4"> 
+            <div class="product thumbnail" >
+                <img src="images/sanpham/<?php echo $rows['hinhanh'];?>" alt="<?php echo $rows['tenhang'];?>" width="240px" height="147px">
+                <a href="<?php echo $link;?>" title="<?php echo $rows['tenhang'];?>"></a>
+            </div>
             <a href="<?php echo $link;?>" title="<?php echo $rows['tenhang'];?>">
 				<div class="title">				
 					<h2 class="head_sp"><?php echo $rows['tenhang'];?></h2>
 				</div>
 			</a>
-            <div class="product thumbnail" style="height:149px;">
-                <img src="images/sanpham/<?php echo $rows['hinhanh'];?>" alt="<?php echo $rows['tenhang'];?>" width="240px" height="147px">
-                <a href="<?php echo $link;?>" title="<?php echo $rows['tenhang'];?>">
-                   
-                </a>
-            </div>
-			<p class="home-text hidden-xs clear">
+			<div>
+			<p class="home-text hidden-xs clear content-ellipsis">
 				<?php echo $rows['slogan'];?>
-			</p>
+			</p></div>
             <div class="fot-box">
                 <p class="price">
 					<span class="new-price"><?php echo number_format($rows['giatien']);?> đ</span>

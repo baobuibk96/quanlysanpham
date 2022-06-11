@@ -52,10 +52,10 @@
 
 	  // Tạo liên kết tới trang đầu và trang trang trước
 	  if($curpage!=1){
-	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page=1&total='.$total.'" title="trang đầu">Trang đầu </a>';
+	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page=1&total='.$total.'" title="trang đầu">❮❮</a>';
 	  }
 	  if($curpage  > 1){
-	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'] .$this->setlang().'page='.($curpage-1).'&total='.$total.'" title="trang trước">< </a>';
+	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'] .$this->setlang().'page='.($curpage-1).'&total='.$total.'" title="trang trước">❮</a>';
 	  }
 
 	  // Tạo liên kết tới các trang
@@ -71,10 +71,10 @@
 
 	  // Tạo liên kết tới trang sau và trang cuối
 	  if(($curpage+1)<=$pages){
-	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page='.($curpage+1).'&total='.$total.'" title="Đến trang sau"> > </a>';
+	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page='.($curpage+1).'&total='.$total.'" title="Đến trang sau"> ❯</a>';
 	  }
 	  if(($curpage != $pages) && ($pages != 0)){
-	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page='.$pages.'&total='.$total.'" title="trang cuối"> Trang cuối</a>';
+	   $page_list .= '<a href="'.$_SERVER['REQUEST_URI'].$this->setlang().'page='.$pages.'&total='.$total.'" title="trang cuối"> ❯❯</a>';
 	  }
 	  return $page_list;
 	}// end pagesList

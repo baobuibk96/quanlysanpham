@@ -1,5 +1,5 @@
 <div class="footer">
 	<div>
-	TRUONG THANH NHAN Copyright @ <?php echo date("Y");?>
+	Bùi Thiên Ngọc Copyright @ <?php echo date("Y");?>
 	</div>
 </div>

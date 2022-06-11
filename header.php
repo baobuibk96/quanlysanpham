@@ -1,7 +1,7 @@
 <?php
 	require("dbconnect.inc");
 ?>
-<div id="menu">
+<div id="menu" class="container">
   <ul class="main">
     <li><a href="index.php"><strong>Trang chủ</strong></a></li>
 	<?php

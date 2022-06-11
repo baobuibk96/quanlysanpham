@@ -25,21 +25,25 @@
   <div class="hearder">
     <?php include("header.php");?>
   </div>
-  <div class="wapper">
-	<?php 
+  <div class="container">
+    <div class="wapper ">
+    
+      <div class="wleft"><?php include("theleft.php");?></div>
+      <div class="wright"><?php include("themain.php");?></div>
+    </div>
+  </div>
+  
+  <div class="fter"><?php include("footer.php");?></div>
+  <?php 
 	if(isset($_SESSION['mess'])&&$_SESSION['mess']!="")
 		{
-	?>
-		<div class='message' id='message'><h3>Thông báo</h3><a onclick="jQuery('#message').css('display','none')" href="javascript:void()">X</a><span><?php echo $_SESSION['mess'];?></span></div>
-	<?php
+    ?>
+      <div class='message' id='message'><h3>Thông báo</h3><a onclick="jQuery('#message').css('display','none')" href="javascript:void()">X</a><span><?php echo $_SESSION['mess'];?></span></div>
+    <?php
 
 			unset($_SESSION['mess']);
 		}
 	?>
-    <div class="wleft"><?php include("theleft.php");?></div>
-    <div class="wright"><?php include("themain.php");?></div>
-    <div class="fter"><?php include("footer.php");?></div>
-  </div>
 </div>
 </body>
 </html>
