@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteRule ^index\.html$ /index.php
+RewriteRule ^danhmuc-([^/]*)\.html$ /index.php?ml=$1 [L]
+RewriteRule ^quantri.html$ index.php?action=101
+RewriteRule ^dangnhap.html$ index.php?action=1
+RewriteRule ^dangnhapadmin.html$ index.php?action=11
+RewriteRule ^dangky.html$ index.php?action=2
+RewriteRule ^thoat.html$ linkthoat.php?action=8
+RewriteRule ^don-hang.html$ index.php?action=121
+RewriteRule ^themsanpham.html$ index.php?action=3
+RewriteRule ^gio-hang.html$ index.php?action=4
+RewriteRule ^quanly-danhmuc.html$ index.php?action=111
+RewriteRule ^quanly-sanpham.html$ index.php?action=10
+RewriteRule ^don-hang-admin.html$ index.php?action=109
+RewriteRule ^themdanhmuc.html$ index.php?action=112
+RewriteRule ^san-pham-([^/]*)\.html$ /index.php?chitiet=$1
+RewriteRule ^sua-san-pham-([^/]*)\.html$ /index.php?sua=$1
+RewriteRule ^sua-danhmuc-([^/]*)\.html$ /index.php?suadanhmuc=$1
+RewriteRule ^xoa-san-pham-([^/]*)\.html$ /index.php?xoa=$1
